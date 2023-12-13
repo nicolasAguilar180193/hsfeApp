@@ -1,26 +1,39 @@
 # HsfeApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
+App en base a una prueba tecnica que requiere realizar una app sencilla por medio de la siguiente especicacion:
 
-## Development server
+La "Herramienta de seguimiento de la felicidad del empleado" o HSFE, para acelerar las cosas.
+HSFE, es una aplicación que ayuda al usuario a realizar un seguimiento del nivel de felicidad de las personas relacionadas con su empresa.
+Cada persona tendrá las siguientes propiedades:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+* Nombre
+* Categoría (Empleado o Gerente)
+* nombre de empresa
+* Nivel de felicidad
 
-## Code scaffolding
+Se precisa que enumere a las personas y permita buscarlas por su nombre o categoría. Los resultados deben incluir la posibilidad de ordenarlos por nivel de felicidad, categoría o empresa en orden ascendente o descendente.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+# Instalacion:
 
-## Running unit tests
+## Clonar el repositorio:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+https://github.com/nicolasAguilar180193/hsfeApp.git
+```
 
-## Running end-to-end tests
+## Instalar dependencias
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
+npm install
+```
+
+## Levantar el servidor server
+
+```
+ng serve
+```
 
 ## Further help
 
