@@ -5,7 +5,7 @@ import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { Person } from 'src/app/models';
-import { People } from 'src/app/data';
+import { DataSharingService } from 'src/app/services/data-sharing.service';
 
 
 @Component({
@@ -17,18 +17,23 @@ import { People } from 'src/app/data';
 })
 export class PeopleTableComponent {
   displayedColumns: string[] = ['id', 'name', 'category', 'company', 'levelOfHappiness'];
-  dataSource: MatTableDataSource<Person>;
+  dataSource!: MatTableDataSource<Person>;
+  people: Person[];
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor() {
-    this.dataSource = new MatTableDataSource(People);
+  constructor(public dataSharingService: DataSharingService) {
+    this.people = this.dataSharingService.getData();
+    // this.dataSource = new MatTableDataSource(this.people);
   }
 
   ngAfterViewInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
+    this.dataSharingService.getAsyncData().subscribe((data) => {
+      this.dataSource = new MatTableDataSource(data);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+    });
   }
 
   applyFilter(event: Event) {
