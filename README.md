@@ -13,6 +13,7 @@ Cada persona tendrá las siguientes propiedades:
 
 Se precisa que enumere a las personas y permita buscarlas por su nombre o categoría. Los resultados deben incluir la posibilidad de ordenarlos por nivel de felicidad, categoría o empresa en orden ascendente o descendente.
 
+Ademas poder agregar a las personas a una lista de favoritos, que sea facil de consultar dicha lista.
 
 
 # Instalacion:
