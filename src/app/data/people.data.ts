@@ -2,7 +2,7 @@ import { Person } from '../models';
 
 export const People: Person[] = [
   {
-    id: '1',
+    id: 1,
     name: 'Alan Bello',
     category: 'manager',
     company: 'Planet of the Grapes',
@@ -10,7 +10,7 @@ export const People: Person[] = [
     favorite: true
   },
   {
-    id: '2',
+    id: 2,
     name: 'Alejandro Danza',
     category: 'manager',
     company: 'Lord of the Fries',
@@ -18,7 +18,7 @@ export const People: Person[] = [
     favorite: true
   },
   {
-    id: '3',
+    id: 3,
     name: 'Sara Grecia',
     category: 'manager',
     company: 'Hurry Curry',
@@ -26,7 +26,7 @@ export const People: Person[] = [
     favorite: false
   },
   {
-    id: '4',
+    id: 4,
     name: 'Ramon Llanura',
     category: 'manager',
     company: 'Eggcellent Eats',
@@ -34,7 +34,7 @@ export const People: Person[] = [
     favorite: false
   },
   {
-    id: '5',
+    id: 5,
     name: 'Alejandro Pedros',
     category: 'manager',
     company: 'Thai Tanic',
@@ -42,7 +42,7 @@ export const People: Person[] = [
     favorite: false
   },
   {
-    id: '6',
+    id: 6,
     name: 'Pablo Ducho',
     category: 'manager',
     company: 'Wok This Way',
@@ -50,7 +50,7 @@ export const People: Person[] = [
     favorite: false
   },
   {
-    id: '7',
+    id: 7,
     name: 'Samuel Glorias',
     category: 'manager',
     company: 'Sam and Ella',
@@ -58,7 +58,7 @@ export const People: Person[] = [
     favorite: false
   },
   {
-    id: '8',
+    id: 9,
     name: 'Anna Higo',
     category: 'manager',
     company: 'Mustard’s Last Stand',
@@ -66,7 +66,7 @@ export const People: Person[] = [
     favorite: false
   },
   {
-    id: '9',
+    id: 9,
     name: 'Janine Trovello',
     category: 'manager',
     company: 'Life of Pie',
@@ -74,7 +74,7 @@ export const People: Person[] = [
     favorite: false
   },
   {
-    id: '10',
+    id: 10,
     name: 'Ricardo Lini',
     category: 'manager',
     company: 'Basic Kneads Pizza',
@@ -82,7 +82,7 @@ export const People: Person[] = [
     favorite: false
   },
   {
-    id: '11',
+    id: 11,
     name: 'Jayde Mccallum',
     category: 'employee',
     company: 'Earth Wind And Flour',
@@ -90,7 +90,7 @@ export const People: Person[] = [
     favorite: false
   },
   {
-    id: '12',
+    id: 12,
     name: 'Sakina Tillman',
     category: 'employee',
     company: '9021 Pho',
@@ -98,7 +98,7 @@ export const People: Person[] = [
     favorite: false
   },
   {
-    id: '13',
+    id: 13,
     name: 'Ashwin Andrews',
     category: 'employee',
     company: 'Sweet Cheezus',
@@ -106,7 +106,7 @@ export const People: Person[] = [
     favorite: false
   },
   {
-    id: '14',
+    id: 14,
     name: 'Rheanna Gilmour',
     category: 'employee',
     company: 'Fishcoteque',
@@ -114,7 +114,7 @@ export const People: Person[] = [
     favorite: false
   },
   {
-    id: '15',
+    id: 15,
     name: 'Joann Weiss',
     category: 'employee',
     company: 'Grill Em All',
@@ -122,7 +122,7 @@ export const People: Person[] = [
     favorite: false
   },
   {
-    id: '16',
+    id: 16,
     name: 'Everett Medrano',
     category: 'employee',
     company: 'A Cut Above',
@@ -130,7 +130,7 @@ export const People: Person[] = [
     favorite: false
   },
   {
-    id: '17',
+    id: 17,
     name: 'Duncan Gaines',
     category: 'employee',
     company: 'Fro-ternity',
@@ -138,7 +138,7 @@ export const People: Person[] = [
     favorite: false
   },
   {
-    id: '18',
+    id: 18,
     name: 'Inaya Cope',
     category: 'employee',
     company: 'Jack the Clipper',
@@ -146,7 +146,7 @@ export const People: Person[] = [
     favorite: false
   },
   {
-    id: '19',
+    id: 19,
     name: 'Samad Emery',
     category: 'employee',
     company: 'My Hair Lady',
@@ -154,7 +154,7 @@ export const People: Person[] = [
     favorite: false
   },
   {
-    id: '20',
+    id: 20,
     name: 'Ellouise Hammond',
     category: 'employee',
     company: 'The Director’s Cut',

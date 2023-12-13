@@ -26,14 +26,14 @@ export class FavoritesTableComponent implements OnInit{
   constructor(public dataSharingService: DataSharingService) { }
 
   ngAfterViewInit() {
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+  }
+  
+  ngOnInit(): void {
     this.dataSharingService.getFavoritePeople().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
     });
-  }
-
-  ngOnInit(): void {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
   }
 
   applyFilter(event: Event) {

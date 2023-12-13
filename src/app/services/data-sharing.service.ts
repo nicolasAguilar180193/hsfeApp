@@ -10,8 +10,6 @@ export class DataSharingService {
 	private peopleSubject: BehaviorSubject<Person[]> = new BehaviorSubject<Person[]>(People);
 	peopleObservable: Observable<Person[]> = this.peopleSubject.asObservable();
 
-	constructor() {}
-
 	getAsyncData(): Observable<Person[]> {
 		return this.peopleObservable;
 	}
@@ -20,5 +18,12 @@ export class DataSharingService {
 		return this.peopleObservable.pipe(
 			map((people) => people.filter((person) => person.favorite))
 		);
+	}
+
+	toggleFavorite(id: number): void {
+		const people = this.peopleSubject.getValue();
+		const favoriteIndex = people.findIndex((person) => person.id === id);
+		people[favoriteIndex].favorite = !people[favoriteIndex].favorite;
+		this.peopleSubject.next(people);
 	}
 }
