@@ -4,4 +4,5 @@ export interface Person {
 	category: string;
 	company: string;
 	levelOfHappiness: string;
+	favorite: boolean;
 }

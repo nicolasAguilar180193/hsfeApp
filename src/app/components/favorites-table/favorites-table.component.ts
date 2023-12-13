@@ -7,30 +7,31 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { Person } from 'src/app/models';
 import { DataSharingService } from 'src/app/services/data-sharing.service';
 
-
 @Component({
-  selector: 'app-people-table',
+  selector: 'app-favorites-table',
   standalone: true,
   imports: [MatFormFieldModule, MatInputModule, MatTableModule, MatSortModule, MatPaginatorModule],
-  templateUrl: './people-table.component.html',
-  styleUrls: ['./people-table.component.scss']
+  templateUrl: './favorites-table.component.html',
+  styleUrls: ['./favorites-table.component.scss']
 })
-export class PeopleTableComponent implements OnInit{
+export class FavoritesTableComponent implements OnInit{
+
   displayedColumns: string[] = ['id', 'name', 'category', 'company', 'levelOfHappiness'];
   dataSource!: MatTableDataSource<Person>;
+
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(public dataSharingService: DataSharingService) {}
+  constructor(public dataSharingService: DataSharingService) { }
 
-  ngOnInit(): void {
-    this.dataSharingService.getAsyncData().subscribe((data) => {
+  ngAfterViewInit() {
+    this.dataSharingService.getFavoritePeople().subscribe((data) => {
       this.dataSource = new MatTableDataSource(data);
     });
   }
 
-  ngAfterViewInit() {
+  ngOnInit(): void {
     this.dataSource.paginator = this.paginator;
     this.dataSource.sort = this.sort;
   }

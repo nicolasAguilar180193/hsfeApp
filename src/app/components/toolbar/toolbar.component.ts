@@ -4,7 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialog } from '@angular/material/dialog';
 import { MatDialogModule } from '@angular/material/dialog';
-import { PeopleTableComponent } from '../people-table';
+import { FavoritesTableComponent } from '../favorites-table';
 
 
 @Component({
@@ -19,7 +19,7 @@ export class ToolbarComponent {
   constructor(public dialog: MatDialog) {}
 
   openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
-    this.dialog.open(PeopleTableComponent, {
+    this.dialog.open(FavoritesTableComponent, {
       enterAnimationDuration,
       exitAnimationDuration,
     });

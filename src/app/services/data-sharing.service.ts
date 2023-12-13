@@ -1,22 +1,24 @@
 import { Injectable } from '@angular/core';
 import { People } from '../data';
 import { Person } from '../models';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable, map } from 'rxjs';
 
 @Injectable({
 	providedIn: 'root'
 })
 export class DataSharingService {
-	data: Person[] = People;
-	dataObservable = new BehaviorSubject<Person[]>(this.data);
+	private peopleSubject: BehaviorSubject<Person[]> = new BehaviorSubject<Person[]>(People);
+	peopleObservable: Observable<Person[]> = this.peopleSubject.asObservable();
 
 	constructor() {}
 
-	getData() {
-		return this.data;
+	getAsyncData(): Observable<Person[]> {
+		return this.peopleObservable;
 	}
 
-	getAsyncData() {
-		return this.dataObservable.asObservable();
+	getFavoritePeople(): Observable<Person[]> {
+		return this.peopleObservable.pipe(
+			map((people) => people.filter((person) => person.favorite))
+		);
 	}
 }
